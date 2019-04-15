@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SlamIOSPod_Example' do
+  pod 'SlamIOSPod', :path => '../'
+
+  target 'SlamIOSPod_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
