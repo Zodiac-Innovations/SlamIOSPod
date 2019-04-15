@@ -1,0 +1,16 @@
+PODS:
+  - SlamIOSPod (0.1.0)
+
+DEPENDENCIES:
+  - SlamIOSPod (from `../`)
+
+EXTERNAL SOURCES:
+  SlamIOSPod:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SlamIOSPod: b8969be0931aab4dae7031d86fa602158a0993f0
+
+PODFILE CHECKSUM: 23122bf61f81c77838253d081dd6f6b7e007af95
+
+COCOAPODS: 1.7.0.beta.3

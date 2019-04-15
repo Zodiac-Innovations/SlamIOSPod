@@ -1,0 +1,6 @@
+framework module SlamIOSPod {
+  umbrella header "SlamIOSPod-umbrella.h"
+
+  export *
+  module * { export * }
+}

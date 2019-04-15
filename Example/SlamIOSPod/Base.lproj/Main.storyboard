@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Example View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SlamIOSPod_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ExampleViewController" customModule="SlamIOSPod_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -20,8 +20,46 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slam Example" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Mau-yf-Vvy">
+                                <rect key="frame" x="70" y="312" width="235" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzW-Ay-dgj">
+                                <rect key="frame" x="141.5" y="363" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zak-VO-d8l" customClass="SlamLabel" customModule="SlamIOSPod">
+                                <rect key="frame" x="175" y="392" width="25" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfj-jZ-Jl9" customClass="SlamButton" customModule="SlamIOSPod">
+                                <rect key="frame" x="172.5" y="421" width="30" height="30"/>
+                                <state key="normal" title="Flip"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Mfj-jZ-Jl9" firstAttribute="top" secondItem="zak-VO-d8l" secondAttribute="bottom" constant="8" id="IbI-mv-qiV"/>
+                            <constraint firstItem="GzW-Ay-dgj" firstAttribute="top" secondItem="Mau-yf-Vvy" secondAttribute="bottom" constant="8" id="Q6r-Pa-mgC"/>
+                            <constraint firstItem="Mfj-jZ-Jl9" firstAttribute="centerX" secondItem="zak-VO-d8l" secondAttribute="centerX" id="SKe-85-ns7"/>
+                            <constraint firstItem="Mau-yf-Vvy" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="TG3-f2-f2I"/>
+                            <constraint firstItem="Mau-yf-Vvy" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="WQi-wb-mjd"/>
+                            <constraint firstItem="zak-VO-d8l" firstAttribute="centerX" secondItem="GzW-Ay-dgj" secondAttribute="centerX" id="cez-2c-cc4"/>
+                            <constraint firstItem="zak-VO-d8l" firstAttribute="top" secondItem="GzW-Ay-dgj" secondAttribute="bottom" constant="8" id="mL0-9R-xKm"/>
+                            <constraint firstItem="GzW-Ay-dgj" firstAttribute="centerX" secondItem="Mau-yf-Vvy" secondAttribute="centerX" id="xVN-UX-DAa"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lightButton" destination="Mfj-jZ-Jl9" id="tz1-Xd-ISH"/>
+                        <outlet property="lightLabel" destination="zak-VO-d8l" id="0nU-Mj-mkT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

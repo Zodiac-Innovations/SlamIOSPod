@@ -1,0 +1,22 @@
+{
+  "name": "SlamIOSPod",
+  "version": "0.1.0",
+  "summary": "A short description of SlamIOSPod.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/magesteve/SlamIOSPod",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "magesteve": "magesteve@mac.com"
+  },
+  "source": {
+    "git": "https://github.com/magesteve/SlamIOSPod.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SlamIOSPod/Classes/**/*"
+}
