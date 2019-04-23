@@ -20,7 +20,7 @@ class ExampleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.lightButton?.pressAction = {
+        self.lightButton?.pressActionBlock = {
             self.lightFlag = !self.lightFlag
             
             self.lightLabel?.updateUI()

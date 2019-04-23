@@ -1,38 +1,38 @@
 //
-//  SlamButton.swift
+//  SlamSwitch.swift
 //  SlamIOSPod
 //
-//  Created by Steve Sheets on 4/15/19.
-//  Copyright (c) 2019 Steve Sheets. All rights reserved.
+//  Created by Steve Sheets on 4/18/19.
+//  Copyright © 2019 Steve Sheets. All rights reserved.
 //
 
 import UIKit
 
 // MARK: Class
 
-/// Closure based Button view
-public class SlamButton: UIButton, SlamControlProtocol, SlamInteractiveProtocol {
-    
+/// Closure based Switch view
+public class SlamSwitch: UISwitch, SlamControlProtocol, SlamInteractiveProtocol {
+
     // MARK: Protocol Properties
     
     @IBInspectable public var referral: String = ""
     
     @IBInspectable public var task: String = ""
-    
+
     @IBInspectable public var param: String = ""
-    
+
     @IBInspectable public var autoUI: Bool = false
-    
-    public var visibleDataSource: Slam.FlagClosure?
-    
-    public var enableDataSource: Slam.FlagClosure?
-    
+
     public var pressActionBlock: Slam.ActionClosure?
 
+    public var enableDataSource: Slam.FlagClosure?
+
+    public var visibleDataSource: Slam.FlagClosure?
+    
     // MARK: Properties
     
-    /// Optional data source closure for text of button
-    public var textDataSource: Slam.LabelClosure?
+    /// Optional data source closure for status of switch
+    public var switchDataSource: Slam.FlagClosure?
     
     // MARK: Lifecycle Methods
     
@@ -47,38 +47,37 @@ public class SlamButton: UIButton, SlamControlProtocol, SlamInteractiveProtocol 
         
         addTarget(self, action: #selector(press(sender:)), for: .touchUpInside)
     }
-    
-    // MARK: Protocol Methods
+
+    // MARK: Inherited Methods
     
     public func fillUI() {
-        if let textDataSource = textDataSource {
-            let string = textDataSource()
+        if let switchDataSource = switchDataSource {
+            let flag = switchDataSource()
             
-            if string != title(for: .normal) {
-                setTitle(string, for: .normal)
+            if flag != self.isOn {
+                setOn(flag, animated: false)
             }
         }
     }
-
+    
     // MARK: Private Methods
     
     /// Action method invoked when view is pressed. It invokes the closure.
     @objc func press(sender: UIView) {
         pressAction()
     }
-
 }
 
 // MARK: Extension
 
 extension UIViewController {
-    
-    /// Returns an Button with given referral id
-    ///
-    /// - Parameter referrral: String with name of Button
-    /// - Returns: Returns Button with given name
-    func findButtonElement(with referrral: String) -> SlamButton? {
-        return findElement(with: referrral) as? SlamButton
-    }
 
+    /// Returns an Switch with given referral id
+    ///
+    /// - Parameter referrral: String with name of Switch
+    /// - Returns: Returns Switch with given name
+    func findSwitchElement(with referrral: String) -> SlamSwitch? {
+        return findElement(with: referrral) as? SlamSwitch
+    }
+    
 }

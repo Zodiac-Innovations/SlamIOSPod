@@ -8,40 +8,25 @@
 
 import UIKit
 
+// MARK: Class
+
 /// Closure based Label view
-public class SlamLabel: UILabel {
+public class SlamLabel: UILabel, SlamViewProtocol {
     
-    // MARK: Typealias
-    
-    /// Closure type that is passed nothing, and returns string.
-    public typealias LabelClosure = () -> String
-    
-    /// Closure type that is passed nothing, and returns Boolean flag.
-    public typealias FlagClosure = () -> Bool
-    
-    // MARK: Properties
+    // MARK: Protocol Properties
     
     @IBInspectable public var referral: String = ""
     
-    public var textDataSource: SlamLabel.LabelClosure?
+    public var visibleDataSource: Slam.FlagClosure?
+
+    // MARK: Properties
     
-    public var visibleClosure: SlamLabel.FlagClosure?
+    /// Optional data source closure for text of label
+    public var textDataSource: Slam.LabelClosure?
     
-    // MARK: Methods
+     // MARK: Protocol Methods
     
-    public func updateUI() {
-        // Hide the view if needed, set text if needed, then show if needed.
-        
-        let currentlyVisible = !self.isHidden
-        var wantVisible = currentlyVisible
-        if let visibleClosure = visibleClosure {
-            wantVisible = visibleClosure()
-        }
-        
-        if !wantVisible, currentlyVisible {
-            self.isHidden = true
-        }
-        
+    public func fillUI() {
         if let textDataSource = textDataSource {
             let string = textDataSource()
             
@@ -49,9 +34,19 @@ public class SlamLabel: UILabel {
                 self.text = string
             }
         }
-        
-        if wantVisible, !currentlyVisible {
-            self.isHidden = false
-        }
     }
+}
+
+// MARK: Extension
+
+extension UIViewController {
+    
+    /// Returns an Label with given referral id
+    ///
+    /// - Parameter referrral: String with name of Label
+    /// - Returns: Returns Label with given name
+    func findLabelElement(with referrral: String) -> SlamLabel? {
+        return findElement(with: referrral) as? SlamLabel
+    }
+    
 }
