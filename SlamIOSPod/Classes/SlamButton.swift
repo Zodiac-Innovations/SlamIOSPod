@@ -70,7 +70,6 @@ public class SlamButton: UIButton, SlamControlProtocol, SlamInteractiveProtocol 
     @objc public func press(sender: UIView) {
         pressAction()
     }
-
 }
 
 // MARK: Extension

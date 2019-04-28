@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
     s.source           = { :git => 'https://github.com/magesteve/SlamIOSPod.git', :tag =>     s.version.to_s }
     s.social_media_url = 'https://twitter.com/magesteve'
     
-    s.ios.deployment_target = '8.0'
+    s.ios.deployment_target = '11.0'
     s.source_files = 'SlamIOSPod/Classes/*.swift'
     s.frameworks = 'UIKit'
     s.swift_version = '5.0'

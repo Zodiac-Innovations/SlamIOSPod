@@ -101,10 +101,8 @@ public class SlamWebView: WKWebView, WKNavigationDelegate, WKUIDelegate, SlamVie
     /// - Parameter path: String containing Path to local file.
     /// - Parameter suffix: String file extension for file.
     public func showFile(path: String, suffix: String = "html") {
-        if #available(iOS 9.0, *) {
-            if let url = Bundle.main.url(forResource: path, withExtension: suffix) {
-                loadFileURL(url, allowingReadAccessTo: url.deletingLastPathComponent())
-            }
+        if let url = Bundle.main.url(forResource: path, withExtension: suffix) {
+            loadFileURL(url, allowingReadAccessTo: url.deletingLastPathComponent())
         }
     }
     

@@ -135,6 +135,12 @@ A task is a named global action that can be invoked from almost any location wit
 
 A common pattern is to use register a task (like pop modal view controller), which will be invoked when the user clicks on a SlamButton. All SlamButton's has an optional task name & an optional task param property.  When the user clicks on a button, the SlamButton code looks at its properties. If they are not empty, the system invokes SlamTask's runTask(name:param:) function.  Multiple buttons can use the same task, using different params (or the same).
 
+Initially there are several pre-defined tasks, common to iOS development, that are loaded into the list.  These include:
+
+"pop" - Dismiss Topmost modal view controller.
+"push" - Load the view controller from the storyboard with the name passed in param, and display it on the top
+"url" - Given the address passed in param, open the default browser (usually Safari) and go to that page.
+
 Thus Tasks are an excellent way to divide an action from the element that invokes it.
 
 ## Future
