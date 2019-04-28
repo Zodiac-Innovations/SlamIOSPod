@@ -21,8 +21,7 @@ SlamIOSPod is targeted for the last versions of iOS and the Swift programming la
 
 ## Installation
 
-SlamIOSPod is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+SlamIOSPod is available through [CocoaPods](https://cocoapods.org). To install it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'SlamIOSPod'
