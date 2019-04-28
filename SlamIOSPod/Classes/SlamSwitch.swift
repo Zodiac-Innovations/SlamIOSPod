@@ -11,6 +11,10 @@ import UIKit
 // MARK: Class
 
 /// Closure based Switch view
+///
+/// This class provides a closure based Switch view. It supports the SlamViewProtocol, SlamControlProtocol, and SlamInteractiveProtocol (with appropriate properties and functions).
+///
+/// The single closure switchDataSource returns Boolean to indicate the state of the Switch, on or off.
 public class SlamSwitch: UISwitch, SlamControlProtocol, SlamInteractiveProtocol {
 
     // MARK: Protocol Properties
@@ -63,14 +67,14 @@ public class SlamSwitch: UISwitch, SlamControlProtocol, SlamInteractiveProtocol 
     // MARK: Private Methods
     
     /// Action method invoked when view is pressed. It invokes the closure.
-    @objc func press(sender: UIView) {
+    @objc public func press(sender: UIView) {
         pressAction()
     }
 }
 
 // MARK: Extension
 
-extension UIViewController {
+public extension UIViewController {
 
     /// Returns an Switch with given referral id
     ///

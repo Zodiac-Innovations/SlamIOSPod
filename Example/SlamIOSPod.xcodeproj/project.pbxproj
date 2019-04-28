@@ -14,6 +14,10 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		8251C51BB5C60578A5A6BCB9 /* Pods_SlamIOSPod_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A1B4A12DB6A33E34CB7A3B2 /* Pods_SlamIOSPod_Example.framework */; };
+		AA3E602822701623000CB55C /* ControlsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3E602722701623000CB55C /* ControlsViewController.swift */; };
+		AA3E602A2270162E000CB55C /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3E60292270162E000CB55C /* TextViewController.swift */; };
+		AA3E602C2270163F000CB55C /* TablesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3E602B2270163F000CB55C /* TablesViewController.swift */; };
+		AA3E602E2270164B000CB55C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3E602D2270164B000CB55C /* WebViewController.swift */; };
 		B1D6E1B81596E3924CD0224B /* Pods_SlamIOSPod_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC97F2E8A90EED9FF7BAFD0 /* Pods_SlamIOSPod_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +50,11 @@
 		756DA8DA3E947FBD129B56BE /* Pods-SlamIOSPod_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlamIOSPod_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SlamIOSPod_Tests/Pods-SlamIOSPod_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		93804977FB70BF46343D75CA /* Pods-SlamIOSPod_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlamIOSPod_Example.debug.xcconfig"; path = "Target Support Files/Pods-SlamIOSPod_Example/Pods-SlamIOSPod_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9465F48C2C384E48E403FA9D /* Pods-SlamIOSPod_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlamIOSPod_Tests.release.xcconfig"; path = "Target Support Files/Pods-SlamIOSPod_Tests/Pods-SlamIOSPod_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		AA3E6026226FA1FB000CB55C /* SlamIOSPod-Documentation.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "SlamIOSPod-Documentation.md"; path = "../SlamIOSPod-Documentation.md"; sourceTree = "<group>"; };
+		AA3E602722701623000CB55C /* ControlsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsViewController.swift; sourceTree = "<group>"; };
+		AA3E60292270162E000CB55C /* TextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
+		AA3E602B2270163F000CB55C /* TablesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablesViewController.swift; sourceTree = "<group>"; };
+		AA3E602D2270164B000CB55C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		ACFA2D3AF527301CB1D00F92 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +104,10 @@
 			children = (
 				607FACD51AFB9204008FA782 /* ExampleAppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ExampleViewController.swift */,
+				AA3E602722701623000CB55C /* ControlsViewController.swift */,
+				AA3E60292270162E000CB55C /* TextViewController.swift */,
+				AA3E602B2270163F000CB55C /* TablesViewController.swift */,
+				AA3E602D2270164B000CB55C /* WebViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -134,6 +147,7 @@
 			children = (
 				5C228E5F033D2BA861C30567 /* SlamIOSPod.podspec */,
 				1096AA3AC97740D488F8D9A2 /* README.md */,
+				AA3E6026226FA1FB000CB55C /* SlamIOSPod-Documentation.md */,
 				ACFA2D3AF527301CB1D00F92 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
@@ -331,7 +345,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ExampleViewController.swift in Sources */,
+				AA3E602E2270164B000CB55C /* WebViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* ExampleAppDelegate.swift in Sources */,
+				AA3E602822701623000CB55C /* ControlsViewController.swift in Sources */,
+				AA3E602C2270163F000CB55C /* TablesViewController.swift in Sources */,
+				AA3E602A2270162E000CB55C /* TextViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

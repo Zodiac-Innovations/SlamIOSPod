@@ -12,6 +12,8 @@ import WebKit
 // MARK: Class
 
 /// Closure based Web View
+///
+/// This class has a number of new properties & closures.  The properties currentURL & currentTitle return their respective values.  The urlEventBlock event closure is invoked when the website URL has changed, while the titleEventBlock event closure is invoked when the title changes. The showSite(address:) function will try to load a webpage address, while the showFile(path:suffix:) method loads a local file.  The showFragment(html:) method load the given string as if it was HTML. FInally, clearSite() method sets the webpage to blank.
 public class SlamWebView: WKWebView, WKNavigationDelegate, WKUIDelegate, SlamViewProtocol {
 
     // MARK: Protocol Properties
@@ -73,7 +75,7 @@ public class SlamWebView: WKWebView, WKNavigationDelegate, WKUIDelegate, SlamVie
         self.allowsBackForwardNavigationGestures = true
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder:aDecoder)
         
         self.navigationDelegate = self
@@ -166,7 +168,7 @@ public class SlamWebView: WKWebView, WKNavigationDelegate, WKUIDelegate, SlamVie
 
 // MARK: Extension
 
-extension UIViewController {
+public extension UIViewController {
     
     /// Returns an WebView with given referral id
     ///

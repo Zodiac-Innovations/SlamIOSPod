@@ -11,6 +11,8 @@ import UIKit
 // MARK: Class
 
 /// Abstract class with version information for Library
+///
+/// This class is also used as a name space to define various type definitions.
 public class Slam {
     
     // MARK: Typealias
@@ -56,6 +58,11 @@ public class Slam {
     /// Version Number of Library
     class public func versionNumber() -> Int {
         return 1
+    }
+    
+    /// Version Number of Library
+    class public func version() -> String {
+        return "1.0.0"
     }
     
 }

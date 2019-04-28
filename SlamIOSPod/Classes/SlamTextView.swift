@@ -9,7 +9,11 @@
 import UIKit
 
 /// Closure based Text View
-class SlamTextView: UITextView, SlamViewProtocol, SlamResetProtocol {
+///
+/// This class provides a closure based Switch view. It supports SlamViewProtocol and SlamResetProtocol (with appropriate properties and functions).  Note that as a View that supports SlamResetProtocol, a reloadUI() method must be invoked to update the data (text) stored in the view.
+///
+/// This class has two optional closure properties. The property textDataSource calculates the current text to display in the text view.  The property textFileDataSource returns a file name, that will be loaded into the text view (if it exists).  One or the other or neither of these options can be used, but not both at once.
+public class SlamTextView: UITextView, SlamViewProtocol, SlamResetProtocol {
 
     // MARK: Protocol Properties
     
@@ -72,7 +76,7 @@ class SlamTextView: UITextView, SlamViewProtocol, SlamResetProtocol {
 
 // MARK: Extension
 
-extension UIViewController {
+public extension UIViewController {
     
     /// Returns an TextView with given referral id
     ///

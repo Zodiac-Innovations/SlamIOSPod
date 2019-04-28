@@ -11,31 +11,18 @@ import SlamIOSPod
 
 class ExampleViewController: UIViewController {
     
-    @IBOutlet weak var lightButton: SlamButton?
-    
-    @IBOutlet weak var lightLabel: SlamLabel?
-    
-    var lightFlag = false;
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.lightButton?.pressActionBlock = {
-            self.lightFlag = !self.lightFlag
-            
-            self.lightLabel?.updateUI()
+        SlamTask.addTask(name: "push") { param in
+            let story = UIStoryboard(name: "Main", bundle: nil)
+            let vc = story.instantiateViewController(withIdentifier: param)
+            self.present(vc, animated: true, completion: nil)
         }
         
-        self.lightLabel?.textDataSource = {
-            if self.lightFlag {
-                return "On"
-            }
-            else {
-                return "Off"
-            }
+        SlamTask.addTask(name: "pop") { param in
+            self.dismiss(animated: true)
         }
-        
-        self.lightLabel?.updateUI()
     }
     
 }

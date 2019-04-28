@@ -11,6 +11,10 @@ import UIKit
 // MARK: Class
 
 /// Closure based Button view
+///
+/// This class provides a closure based Button view. It supports the SlamViewProtocol, SlamControlProtocol, and SlamInteractiveProtocol (with appropriate properties and functions).
+///
+/// The textDataSource property contains a closure that provides the name of the button to display.
 public class SlamButton: UIButton, SlamControlProtocol, SlamInteractiveProtocol {
     
     // MARK: Protocol Properties
@@ -63,7 +67,7 @@ public class SlamButton: UIButton, SlamControlProtocol, SlamInteractiveProtocol 
     // MARK: Private Methods
     
     /// Action method invoked when view is pressed. It invokes the closure.
-    @objc func press(sender: UIView) {
+    @objc public func press(sender: UIView) {
         pressAction()
     }
 
@@ -71,7 +75,7 @@ public class SlamButton: UIButton, SlamControlProtocol, SlamInteractiveProtocol 
 
 // MARK: Extension
 
-extension UIViewController {
+public extension UIViewController {
     
     /// Returns an Button with given referral id
     ///

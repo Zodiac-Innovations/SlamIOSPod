@@ -11,6 +11,8 @@ import UIKit
 // MARK: Protocol
 
 /// Protocol for all custom UIViews
+///
+/// This protocol defines two required properties and one required fucntion.  The property Reference (a string) uniquely identifies the element on the View Controller, while the visibleDataSource property has a closure that calculates when the item is hidden or not. The function fillUI() uses class specific closure properties to fill in the current appearance of the view. This function should never be called directly in the code. Instead, the updateUI() function should be used instead.
 public protocol SlamViewProtocol : UIView {
     
     // MARK: Required Properties
@@ -29,6 +31,8 @@ public protocol SlamViewProtocol : UIView {
 }
 
 /// Protocol for larger data sources View
+///
+/// This Protocol is for larger data sources View, that needs a reset ability.  Some classes require a more specific call to update its current configuration.  The SlamResetProtocol is for views that require some style of reload to update their appearance (ex: Table View).  Like fillUI(), the reloadUI() function should never be invoked directly. Instead, the resetUI() function should be used.
 public protocol SlamResetProtocol {
     
     // MARK: Required Methods
@@ -40,6 +44,8 @@ public protocol SlamResetProtocol {
 }
 
 /// Protocol for all custom UIControls
+///
+/// UIControls should all support the SlamViewProtocol. This protocol has one property, the enableDataSource closure. The closure is used by updateUI() to decide to enable or disable the control.
 public protocol SlamControlProtocol : UIControl, SlamViewProtocol {
     
     // MARK: Required Properties
@@ -50,6 +56,13 @@ public protocol SlamControlProtocol : UIControl, SlamViewProtocol {
 }
 
 /// Protocol for all custom Interactive UIControls
+///
+/// Some View elements require an optional action to be associated with interacting with it. Buttons are the perfect example of this. SlamInteractiveProtocol is for Views that need this type of configurable Interaction.
+///
+//// The pressActionBlock property contains an optional closure to invoke when the user interacts with the element (ex: Button is pressed). Alternatively, the task & param properties contain the name of a SlamTask, and an optional parameter for the task.  Lastly, when the autoUI property is true, interacting with the element will cause an updateUI() method to be invoked for the view controller the element is on.
+///
+/// SlamInteractiveProtocol has an extension that provides the pressAction() function. It uses the required properties to invoke the correct action.
+
 public protocol SlamInteractiveProtocol : SlamViewProtocol {
     
     // MARK: Required Properties
@@ -70,7 +83,9 @@ public protocol SlamInteractiveProtocol : SlamViewProtocol {
 
 // MARK: Extension
 
-extension SlamInteractiveProtocol {
+// Extension for Interactive views to handle being pressed.
+
+public extension SlamInteractiveProtocol {
 
     // MARK: Public Method
     
@@ -93,6 +108,13 @@ extension SlamInteractiveProtocol {
 // MARK: Class
 
 /// Closure based View Controller
+///
+/// This class is one of the few Views in the Framework designed to be subclassed.  It provides a basis for any custom subclasses that support the SlamViewProtocol protocol.
+///
+/// The property Reference (a string) uniquely identifies the element on the View Controller, while the visibleDataSource property has a closure that calculates when the item is hidden or not.
+///
+/// The function fillUI() uses class specific closure properties to fill in the current appearance of the view. This function should never be called directly in the code. Instead, the updateUI() function should be used instead.
+
 open class SlamView: UIView, SlamViewProtocol {
 
     // MARK: Protocol Properties
@@ -112,6 +134,7 @@ open class SlamView: UIView, SlamViewProtocol {
 // MARK: Extension
 
 // Extensions to UIView for Closure programming
+
 public extension UIView {
 
     // MARK: Public Methods
@@ -136,7 +159,7 @@ public extension UIView {
         }
     }
 
-    /// Update the User Interface of the view (and sub views)
+    /// Update the User Interface of the view (and sub views).
     func updateUI() {
         if let v = self as? SlamViewProtocol {
             let currentlyVisible = !v.isHidden

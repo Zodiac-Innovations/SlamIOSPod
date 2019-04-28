@@ -11,17 +11,18 @@ import UIKit
 // MARK: Extension
 
 // Extensions to UIViewController for Closure programming
+
 public extension UIViewController {
     
     // MARK: Public Properties
 
     /// Update the User Interface of the main view (and sub views)
-    func updateUI() {
+    func updateMainUI() {
         self.view.updateUI()
     }
     
     /// Reset the User Interface of the main view (and sub views)
-    func resetUI() {
+    func resetMainUI() {
         self.view.resetUI()
     }
     

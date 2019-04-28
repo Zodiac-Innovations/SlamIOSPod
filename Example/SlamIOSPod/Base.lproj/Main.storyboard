@@ -21,48 +21,118 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slam Example" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Mau-yf-Vvy">
-                                <rect key="frame" x="70" y="312" width="235" height="43"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SlamIOS Pod" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Mau-yf-Vvy">
+                                <rect key="frame" x="79" y="28" width="217" height="43"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzW-Ay-dgj">
-                                <rect key="frame" x="141.5" y="363" width="92" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Examples" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="uCg-IV-KBE">
+                                <rect key="frame" x="106.5" y="79" width="162" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zak-VO-d8l" customClass="SlamLabel" customModule="SlamIOSPod">
-                                <rect key="frame" x="175" y="392" width="25" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfj-jZ-Jl9" customClass="SlamButton" customModule="SlamIOSPod">
-                                <rect key="frame" x="172.5" y="421" width="30" height="30"/>
-                                <state key="normal" title="Flip"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1W-AD-nnp" customClass="SlamButton" customModule="SlamIOSPod">
+                                <rect key="frame" x="158.5" y="130" width="58" height="30"/>
+                                <state key="normal" title="Controls"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="task" value="push"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="param" value="controls"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpQ-nb-Yp5" customClass="SlamButton" customModule="SlamIOSPod">
+                                <rect key="frame" x="172.5" y="168" width="30" height="30"/>
+                                <state key="normal" title="Text"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="task" value="push"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="param" value="text"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKL-Zt-qPR" customClass="SlamButton" customModule="SlamIOSPod">
+                                <rect key="frame" x="165" y="206" width="45" height="30"/>
+                                <state key="normal" title="Tables"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="task" value="push"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="param" value="tables"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZq-BB-4Sn" customClass="SlamButton" customModule="SlamIOSPod">
+                                <rect key="frame" x="172" y="244" width="31" height="30"/>
+                                <state key="normal" title="Web"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="task" value="push"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="param" value="web"/>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Mfj-jZ-Jl9" firstAttribute="top" secondItem="zak-VO-d8l" secondAttribute="bottom" constant="8" id="IbI-mv-qiV"/>
-                            <constraint firstItem="GzW-Ay-dgj" firstAttribute="top" secondItem="Mau-yf-Vvy" secondAttribute="bottom" constant="8" id="Q6r-Pa-mgC"/>
-                            <constraint firstItem="Mfj-jZ-Jl9" firstAttribute="centerX" secondItem="zak-VO-d8l" secondAttribute="centerX" id="SKe-85-ns7"/>
-                            <constraint firstItem="Mau-yf-Vvy" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="TG3-f2-f2I"/>
-                            <constraint firstItem="Mau-yf-Vvy" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="WQi-wb-mjd"/>
-                            <constraint firstItem="zak-VO-d8l" firstAttribute="centerX" secondItem="GzW-Ay-dgj" secondAttribute="centerX" id="cez-2c-cc4"/>
-                            <constraint firstItem="zak-VO-d8l" firstAttribute="top" secondItem="GzW-Ay-dgj" secondAttribute="bottom" constant="8" id="mL0-9R-xKm"/>
-                            <constraint firstItem="GzW-Ay-dgj" firstAttribute="centerX" secondItem="Mau-yf-Vvy" secondAttribute="centerX" id="xVN-UX-DAa"/>
+                            <constraint firstItem="d1W-AD-nnp" firstAttribute="top" secondItem="uCg-IV-KBE" secondAttribute="bottom" constant="8" id="3SI-NC-56B"/>
+                            <constraint firstItem="UpQ-nb-Yp5" firstAttribute="top" secondItem="d1W-AD-nnp" secondAttribute="bottom" constant="8" id="9hk-nS-gfr"/>
+                            <constraint firstItem="uCg-IV-KBE" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Hys-Bh-8Ea"/>
+                            <constraint firstItem="d1W-AD-nnp" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="IMZ-ny-eRe"/>
+                            <constraint firstItem="UpQ-nb-Yp5" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Iet-nT-47A"/>
+                            <constraint firstItem="Mau-yf-Vvy" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="Syz-Gl-Xao"/>
+                            <constraint firstItem="Mau-yf-Vvy" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="TXF-d5-Ixn"/>
+                            <constraint firstItem="fKL-Zt-qPR" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="jZL-wV-cZ0"/>
+                            <constraint firstItem="uCg-IV-KBE" firstAttribute="top" secondItem="Mau-yf-Vvy" secondAttribute="bottom" constant="8" id="kfY-O7-p6w"/>
+                            <constraint firstItem="fKL-Zt-qPR" firstAttribute="top" secondItem="UpQ-nb-Yp5" secondAttribute="bottom" constant="8" id="szY-5Q-mS7"/>
+                            <constraint firstItem="qZq-BB-4Sn" firstAttribute="top" secondItem="fKL-Zt-qPR" secondAttribute="bottom" constant="8" id="tNa-vv-IXR"/>
+                            <constraint firstItem="qZq-BB-4Sn" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="zsQ-ky-WfG"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="lightButton" destination="Mfj-jZ-Jl9" id="tz1-Xd-ISH"/>
-                        <outlet property="lightLabel" destination="zak-VO-d8l" id="0nU-Mj-mkT"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="329" y="27"/>
+        </scene>
+        <!--Controls View Controller-->
+        <scene sceneID="sVM-t9-o8X">
+            <objects>
+                <viewController storyboardIdentifier="controls" id="tdI-WA-MHc" customClass="ControlsViewController" customModule="SlamIOSPod_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4rq-jz-VYj"/>
+                        <viewControllerLayoutGuide type="bottom" id="MSV-Nb-Aax"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bx8-TL-D2d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SlamIOS Pod" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="UvF-XV-9RE">
+                                <rect key="frame" x="79" y="28" width="217" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Controls" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="igT-ZG-fG3">
+                                <rect key="frame" x="115.5" y="79" width="144" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xS-M1-YmT" customClass="SlamButton" customModule="SlamIOSPod">
+                                <rect key="frame" x="164.5" y="617" width="46" height="30"/>
+                                <state key="normal" title="Return"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="task" value="push"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="igT-ZG-fG3" firstAttribute="top" secondItem="UvF-XV-9RE" secondAttribute="bottom" constant="8" id="Lyc-6w-i58"/>
+                            <constraint firstItem="1xS-M1-YmT" firstAttribute="centerX" secondItem="bx8-TL-D2d" secondAttribute="centerX" id="M5J-UB-Vdu"/>
+                            <constraint firstItem="igT-ZG-fG3" firstAttribute="centerX" secondItem="bx8-TL-D2d" secondAttribute="centerX" id="OFL-UO-OY6"/>
+                            <constraint firstItem="UvF-XV-9RE" firstAttribute="centerX" secondItem="bx8-TL-D2d" secondAttribute="centerX" id="R6B-D3-eBo"/>
+                            <constraint firstItem="UvF-XV-9RE" firstAttribute="top" secondItem="4rq-jz-VYj" secondAttribute="bottom" constant="8" id="ZPd-gs-PCQ"/>
+                            <constraint firstItem="MSV-Nb-Aax" firstAttribute="top" secondItem="1xS-M1-YmT" secondAttribute="bottom" constant="20" id="paG-RY-2Ud"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y9n-B3-mhg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1033" y="27"/>
         </scene>
     </scenes>
 </document>

@@ -168,6 +168,9 @@
 			isa = PBXGroup;
 			children = (
 				737196B2411E4DE02A03B2DDA202E0EE /* Slam.swift */,
+				AA3E6010226E91BF000CB55C /* SlamView.swift */,
+				AA3E600E226E91BF000CB55C /* SlamViewController.swift */,
+				AA3E6019226E91C0000CB55C /* SlamTask.swift */,
 				AA3E600C226E91B0000CB55C /* SlamActivityIndicatorView.swift */,
 				AAAFB627226520EE0079FA4F /* SlamButton.swift */,
 				AAAFB629226520FA0079FA4F /* SlamLabel.swift */,
@@ -177,11 +180,8 @@
 				AA3E6013226E91BF000CB55C /* SlamSingleItemTableView.swift */,
 				AA3E600F226E91BF000CB55C /* SlamStepper.swift */,
 				AA3E6016226E91C0000CB55C /* SlamSwitch.swift */,
-				AA3E6019226E91C0000CB55C /* SlamTask.swift */,
 				AA3E6012226E91BF000CB55C /* SlamTextField.swift */,
 				AA3E6018226E91C0000CB55C /* SlamTextView.swift */,
-				AA3E6010226E91BF000CB55C /* SlamView.swift */,
-				AA3E600E226E91BF000CB55C /* SlamViewController.swift */,
 				AA3E6011226E91BF000CB55C /* SlamWebView.swift */,
 				E73BF865751A7A716CC2584AB9EF44E9 /* Pod */,
 				E4F3BE83D8E459FB77E5602C986F8141 /* Support Files */,

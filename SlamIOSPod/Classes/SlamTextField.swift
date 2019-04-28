@@ -11,6 +11,8 @@ import UIKit
 // MARK: Class
 
 /// Closure based Text Field
+///
+/// This class provides a closure based Stepper view. It supports the SlamViewProtocol, and SlamControlProtocol (with appropriate properties and functions).
 public class SlamTextField: UITextField, SlamControlProtocol {
     // MARK: Protocol Properties
     
@@ -37,7 +39,7 @@ public class SlamTextField: UITextField, SlamControlProtocol {
 
 // MARK: Extension
 
-extension UIViewController {
+public extension UIViewController {
     
     /// Returns an TextField with given referral id
     ///

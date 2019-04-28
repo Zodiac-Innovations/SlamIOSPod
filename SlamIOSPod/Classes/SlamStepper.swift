@@ -11,6 +11,10 @@ import UIKit
 // MARK: Class
 
 /// Closure based Stepper view
+///
+/// This class provides a closure based Stepper view. It supports the SlamViewProtocol, SlamControlProtocol, and SlamInteractiveProtocol (with appropriate properties and functions).
+///
+/// This view has three additional closure properties: minValueDataSource, maxValueDataSource & valueDataSource. The min & max values calculate the minimum and maximum value (inclusive) allowed in the stepper, while the value closure calculates the current value. That value will be trimmed to fit within the range.
 public class SlamStepper: UIStepper, SlamControlProtocol, SlamInteractiveProtocol {
 
     // MARK: Protocol Properties
@@ -29,8 +33,6 @@ public class SlamStepper: UIStepper, SlamControlProtocol, SlamInteractiveProtoco
     
     public var pressActionBlock: Slam.ActionClosure?
 
-    // MARK: Computed Properties
-    
     // MARK: Properties
     
     /// Optional data source closure for min value of stepper
@@ -87,14 +89,14 @@ public class SlamStepper: UIStepper, SlamControlProtocol, SlamInteractiveProtoco
     // MARK: Private Methods
     
     /// Action method invoked when view is pressed. It invokes the closure.
-    @objc func press(sender: UIView) {
+    @objc public func press(sender: UIView) {
         pressAction()
     }
 }
 
 // MARK: Extension
 
-extension UIViewController {
+public extension UIViewController {
     
     /// Returns an Stepper with given referral id
     ///
