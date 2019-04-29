@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
+        <deployment version="4352" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,48 +21,653 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slam Example" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Mau-yf-Vvy">
-                                <rect key="frame" x="70" y="312" width="235" height="43"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SlamIOS Pod" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Mau-yf-Vvy">
+                                <rect key="frame" x="79" y="28" width="217" height="43"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzW-Ay-dgj">
-                                <rect key="frame" x="141.5" y="363" width="92" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Examples" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="uCg-IV-KBE">
+                                <rect key="frame" x="106.5" y="79" width="162" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zak-VO-d8l" customClass="SlamLabel" customModule="SlamIOSPod">
-                                <rect key="frame" x="175" y="392" width="25" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfj-jZ-Jl9" customClass="SlamButton" customModule="SlamIOSPod">
-                                <rect key="frame" x="172.5" y="421" width="30" height="30"/>
-                                <state key="normal" title="Flip"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1W-AD-nnp" customClass="SlamButton" customModule="SlamIOSPod">
+                                <rect key="frame" x="158.5" y="130" width="58" height="30"/>
+                                <state key="normal" title="Controls"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="task" value="push"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="param" value="controls"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpQ-nb-Yp5" customClass="SlamButton" customModule="SlamIOSPod">
+                                <rect key="frame" x="172.5" y="168" width="30" height="30"/>
+                                <state key="normal" title="Text"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="task" value="push"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="param" value="text"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKL-Zt-qPR" customClass="SlamButton" customModule="SlamIOSPod">
+                                <rect key="frame" x="165" y="206" width="45" height="30"/>
+                                <state key="normal" title="Tables"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="task" value="push"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="param" value="tables"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZq-BB-4Sn" customClass="SlamButton" customModule="SlamIOSPod">
+                                <rect key="frame" x="172" y="244" width="31" height="30"/>
+                                <state key="normal" title="Web"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="task" value="push"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="param" value="web"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThV-V4-wIo" customClass="SlamButton" customModule="SlamIOSPod">
+                                <rect key="frame" x="107.5" y="617" width="160" height="30"/>
+                                <state key="normal" title="About Slam Framework"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="task" value="url"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="param" value="https://github.com/magesteve/SlamIOSPod"/>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Mfj-jZ-Jl9" firstAttribute="top" secondItem="zak-VO-d8l" secondAttribute="bottom" constant="8" id="IbI-mv-qiV"/>
-                            <constraint firstItem="GzW-Ay-dgj" firstAttribute="top" secondItem="Mau-yf-Vvy" secondAttribute="bottom" constant="8" id="Q6r-Pa-mgC"/>
-                            <constraint firstItem="Mfj-jZ-Jl9" firstAttribute="centerX" secondItem="zak-VO-d8l" secondAttribute="centerX" id="SKe-85-ns7"/>
-                            <constraint firstItem="Mau-yf-Vvy" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="TG3-f2-f2I"/>
-                            <constraint firstItem="Mau-yf-Vvy" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="WQi-wb-mjd"/>
-                            <constraint firstItem="zak-VO-d8l" firstAttribute="centerX" secondItem="GzW-Ay-dgj" secondAttribute="centerX" id="cez-2c-cc4"/>
-                            <constraint firstItem="zak-VO-d8l" firstAttribute="top" secondItem="GzW-Ay-dgj" secondAttribute="bottom" constant="8" id="mL0-9R-xKm"/>
-                            <constraint firstItem="GzW-Ay-dgj" firstAttribute="centerX" secondItem="Mau-yf-Vvy" secondAttribute="centerX" id="xVN-UX-DAa"/>
+                            <constraint firstItem="d1W-AD-nnp" firstAttribute="top" secondItem="uCg-IV-KBE" secondAttribute="bottom" constant="8" id="3SI-NC-56B"/>
+                            <constraint firstItem="UpQ-nb-Yp5" firstAttribute="top" secondItem="d1W-AD-nnp" secondAttribute="bottom" constant="8" id="9hk-nS-gfr"/>
+                            <constraint firstItem="uCg-IV-KBE" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Hys-Bh-8Ea"/>
+                            <constraint firstItem="d1W-AD-nnp" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="IMZ-ny-eRe"/>
+                            <constraint firstItem="UpQ-nb-Yp5" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Iet-nT-47A"/>
+                            <constraint firstItem="Mau-yf-Vvy" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="Syz-Gl-Xao"/>
+                            <constraint firstItem="Mau-yf-Vvy" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="TXF-d5-Ixn"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ThV-V4-wIo" secondAttribute="bottom" constant="20" id="cYv-Ds-lrr"/>
+                            <constraint firstItem="ThV-V4-wIo" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="ew1-Jr-8vF"/>
+                            <constraint firstItem="fKL-Zt-qPR" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="jZL-wV-cZ0"/>
+                            <constraint firstItem="uCg-IV-KBE" firstAttribute="top" secondItem="Mau-yf-Vvy" secondAttribute="bottom" constant="8" id="kfY-O7-p6w"/>
+                            <constraint firstItem="fKL-Zt-qPR" firstAttribute="top" secondItem="UpQ-nb-Yp5" secondAttribute="bottom" constant="8" id="szY-5Q-mS7"/>
+                            <constraint firstItem="qZq-BB-4Sn" firstAttribute="top" secondItem="fKL-Zt-qPR" secondAttribute="bottom" constant="8" id="tNa-vv-IXR"/>
+                            <constraint firstItem="qZq-BB-4Sn" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="zsQ-ky-WfG"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="lightButton" destination="Mfj-jZ-Jl9" id="tz1-Xd-ISH"/>
-                        <outlet property="lightLabel" destination="zak-VO-d8l" id="0nU-Mj-mkT"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="329" y="27"/>
+        </scene>
+        <!--Controls View Controller-->
+        <scene sceneID="sVM-t9-o8X">
+            <objects>
+                <viewController storyboardIdentifier="controls" id="tdI-WA-MHc" customClass="ControlsViewController" customModule="SlamIOSPod_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4rq-jz-VYj"/>
+                        <viewControllerLayoutGuide type="bottom" id="MSV-Nb-Aax"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bx8-TL-D2d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SlamIOS Pod" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="UvF-XV-9RE">
+                                <rect key="frame" x="79" y="28" width="217" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Controls" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="igT-ZG-fG3">
+                                <rect key="frame" x="115.5" y="79" width="144" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOn-tw-hJ8">
+                                <rect key="frame" x="37.5" y="126" width="300" height="3"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="JD6-fx-wsv"/>
+                                    <constraint firstAttribute="height" constant="3" id="dZq-wa-s7e"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Light Off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUF-7s-6g0" customClass="SlamLabel" customModule="SlamIOSPod">
+                                <rect key="frame" x="154" y="144" width="67.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="light"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bei-BO-pzj" customClass="SlamButton" customModule="SlamIOSPod">
+                                <rect key="frame" x="145" y="173" width="85" height="30"/>
+                                <state key="normal" title="Light Switch"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="flip"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autoUI" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Do0-lG-6a5">
+                                <rect key="frame" x="37.5" y="211" width="300" height="3"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="g23-9j-UjF"/>
+                                    <constraint firstAttribute="height" constant="3" id="hDo-OO-HF2"/>
+                                </constraints>
+                            </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qbz-U7-1gs" customClass="SlamSwitch" customModule="SlamIOSPod">
+                                <rect key="frame" x="163" y="234" width="51" height="31"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="knob"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autoUI" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lever Open" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUz-FN-lz0" customClass="SlamLabel" customModule="SlamIOSPod">
+                                <rect key="frame" x="143.5" y="273" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="lever"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QiO-8a-6VP">
+                                <rect key="frame" x="37.5" y="309" width="300" height="3"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="APj-Mg-VOY"/>
+                                    <constraint firstAttribute="height" constant="3" id="CMO-DP-cWj"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Counter: 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMw-hJ-mED" customClass="SlamLabel" customModule="SlamIOSPod">
+                                <rect key="frame" x="148" y="343" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="count"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="iAe-cf-OhH" customClass="SlamStepper" customModule="SlamIOSPod">
+                                <rect key="frame" x="140.5" y="372" width="94" height="29"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="step"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autoUI" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </stepper>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="7ms-Sm-YMO" customClass="SlamProgressView" customModule="SlamIOSPod">
+                                <rect key="frame" x="87.5" y="409" width="200" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="BhU-uZ-YZL"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="prog"/>
+                                </userDefinedRuntimeAttributes>
+                            </progressView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="arc-w5-aac">
+                                <rect key="frame" x="37.5" y="436" width="300" height="3"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="7p8-0r-0p3"/>
+                                    <constraint firstAttribute="height" constant="3" id="RD9-A6-ryi"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KGP-wn-wOi" customClass="SlamSegmentedControl" customModule="SlamIOSPod">
+                                <rect key="frame" x="127" y="447" width="121" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="seg"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autoUI" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item: 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTD-wT-bT6" customClass="SlamLabel" customModule="SlamIOSPod">
+                                <rect key="frame" x="162" y="483" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="segcount"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="bMz-wb-rJI" customClass="SlamPageControl" customModule="SlamIOSPod">
+                                <rect key="frame" x="87.5" y="512" width="200" height="37"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="Dmv-LL-qR2"/>
+                                    <constraint firstAttribute="width" constant="200" id="sjr-ks-Dp6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="page"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autoUI" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </pageControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qjF-bi-aBV">
+                                <rect key="frame" x="37.5" y="578" width="300" height="3"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="4fh-Xh-PFu"/>
+                                    <constraint firstAttribute="width" constant="300" id="HXc-ja-QE5"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xS-M1-YmT" customClass="SlamButton" customModule="SlamIOSPod">
+                                <rect key="frame" x="164.5" y="617" width="46" height="30"/>
+                                <state key="normal" title="Return"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="task" value="pop"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="DYp-LD-uxG" customClass="SlamActivityIndicatorView" customModule="SlamIOSPod">
+                                <rect key="frame" x="248" y="273.5" width="20" height="20"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="act"/>
+                                </userDefinedRuntimeAttributes>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Do0-lG-6a5" firstAttribute="centerX" secondItem="bx8-TL-D2d" secondAttribute="centerX" id="0FT-RF-YBG"/>
+                            <constraint firstItem="qbz-U7-1gs" firstAttribute="top" secondItem="Do0-lG-6a5" secondAttribute="bottom" constant="20" id="2Y5-R5-f6z"/>
+                            <constraint firstItem="lUz-FN-lz0" firstAttribute="top" secondItem="qbz-U7-1gs" secondAttribute="bottom" constant="8" id="56C-ap-amj"/>
+                            <constraint firstItem="eOn-tw-hJ8" firstAttribute="top" secondItem="igT-ZG-fG3" secondAttribute="bottom" constant="4" id="7Ey-Jj-Gwo"/>
+                            <constraint firstItem="qjF-bi-aBV" firstAttribute="top" secondItem="bMz-wb-rJI" secondAttribute="bottom" constant="29" id="7ad-uQ-Umf"/>
+                            <constraint firstItem="XUF-7s-6g0" firstAttribute="top" secondItem="eOn-tw-hJ8" secondAttribute="bottom" constant="15" id="ANG-Bl-1tO"/>
+                            <constraint firstItem="7ms-Sm-YMO" firstAttribute="top" secondItem="iAe-cf-OhH" secondAttribute="bottom" constant="8" id="Ars-J1-eMK"/>
+                            <constraint firstItem="bMz-wb-rJI" firstAttribute="centerX" secondItem="bx8-TL-D2d" secondAttribute="centerX" id="CFi-UZ-4xV"/>
+                            <constraint firstItem="7ms-Sm-YMO" firstAttribute="centerX" secondItem="bx8-TL-D2d" secondAttribute="centerX" id="DXq-2K-CwG"/>
+                            <constraint firstItem="iAe-cf-OhH" firstAttribute="centerX" secondItem="bx8-TL-D2d" secondAttribute="centerX" id="ELu-9l-0oh"/>
+                            <constraint firstItem="arc-w5-aac" firstAttribute="centerX" secondItem="bx8-TL-D2d" secondAttribute="centerX" id="EaL-Ne-cO4"/>
+                            <constraint firstItem="WTD-wT-bT6" firstAttribute="centerX" secondItem="bx8-TL-D2d" secondAttribute="centerX" id="JxC-Tg-KH6"/>
+                            <constraint firstItem="igT-ZG-fG3" firstAttribute="top" secondItem="UvF-XV-9RE" secondAttribute="bottom" constant="8" id="Lyc-6w-i58"/>
+                            <constraint firstItem="1xS-M1-YmT" firstAttribute="centerX" secondItem="bx8-TL-D2d" secondAttribute="centerX" id="M5J-UB-Vdu"/>
+                            <constraint firstItem="eOn-tw-hJ8" firstAttribute="centerX" secondItem="bx8-TL-D2d" secondAttribute="centerX" id="MJF-Vq-SWA"/>
+                            <constraint firstItem="DYp-LD-uxG" firstAttribute="centerY" secondItem="lUz-FN-lz0" secondAttribute="centerY" id="Nv2-cE-rh5"/>
+                            <constraint firstItem="igT-ZG-fG3" firstAttribute="centerX" secondItem="bx8-TL-D2d" secondAttribute="centerX" id="OFL-UO-OY6"/>
+                            <constraint firstItem="KGP-wn-wOi" firstAttribute="top" secondItem="arc-w5-aac" secondAttribute="bottom" constant="8" id="Oh4-MS-BuL"/>
+                            <constraint firstItem="iAe-cf-OhH" firstAttribute="top" secondItem="KMw-hJ-mED" secondAttribute="bottom" constant="8" id="PHD-lN-2Zn"/>
+                            <constraint firstItem="UvF-XV-9RE" firstAttribute="centerX" secondItem="bx8-TL-D2d" secondAttribute="centerX" id="R6B-D3-eBo"/>
+                            <constraint firstItem="bMz-wb-rJI" firstAttribute="top" secondItem="WTD-wT-bT6" secondAttribute="bottom" constant="8" id="Rvf-9q-as8"/>
+                            <constraint firstItem="DYp-LD-uxG" firstAttribute="leading" secondItem="lUz-FN-lz0" secondAttribute="trailing" constant="16.5" id="Tfu-dM-cHF"/>
+                            <constraint firstItem="KMw-hJ-mED" firstAttribute="centerX" secondItem="bx8-TL-D2d" secondAttribute="centerX" id="UA0-9a-iwG"/>
+                            <constraint firstItem="WTD-wT-bT6" firstAttribute="top" secondItem="KGP-wn-wOi" secondAttribute="bottom" constant="8" id="Xga-13-GfY"/>
+                            <constraint firstItem="bei-BO-pzj" firstAttribute="top" secondItem="XUF-7s-6g0" secondAttribute="bottom" constant="8" id="ZE6-Ep-RbG"/>
+                            <constraint firstItem="UvF-XV-9RE" firstAttribute="top" secondItem="4rq-jz-VYj" secondAttribute="bottom" constant="8" id="ZPd-gs-PCQ"/>
+                            <constraint firstItem="arc-w5-aac" firstAttribute="top" secondItem="7ms-Sm-YMO" secondAttribute="bottom" constant="25" id="aos-q5-0Zz"/>
+                            <constraint firstItem="KMw-hJ-mED" firstAttribute="top" secondItem="QiO-8a-6VP" secondAttribute="bottom" constant="31" id="bQC-pj-tfE"/>
+                            <constraint firstItem="Do0-lG-6a5" firstAttribute="top" secondItem="bei-BO-pzj" secondAttribute="bottom" constant="8" id="bm6-7k-1Tf"/>
+                            <constraint firstItem="KGP-wn-wOi" firstAttribute="centerX" secondItem="bx8-TL-D2d" secondAttribute="centerX" id="hgK-ca-lPA"/>
+                            <constraint firstItem="qbz-U7-1gs" firstAttribute="centerX" secondItem="bx8-TL-D2d" secondAttribute="centerX" id="iOt-iJ-asP"/>
+                            <constraint firstItem="bei-BO-pzj" firstAttribute="centerX" secondItem="bx8-TL-D2d" secondAttribute="centerX" id="j65-5T-9G2"/>
+                            <constraint firstItem="XUF-7s-6g0" firstAttribute="centerX" secondItem="bx8-TL-D2d" secondAttribute="centerX" id="mA2-la-0Nw"/>
+                            <constraint firstItem="QiO-8a-6VP" firstAttribute="top" secondItem="lUz-FN-lz0" secondAttribute="bottom" constant="15" id="o4j-SU-Z78"/>
+                            <constraint firstItem="MSV-Nb-Aax" firstAttribute="top" secondItem="1xS-M1-YmT" secondAttribute="bottom" constant="20" id="paG-RY-2Ud"/>
+                            <constraint firstItem="lUz-FN-lz0" firstAttribute="centerX" secondItem="bx8-TL-D2d" secondAttribute="centerX" id="vDd-sX-BIu"/>
+                            <constraint firstItem="QiO-8a-6VP" firstAttribute="centerX" secondItem="bx8-TL-D2d" secondAttribute="centerX" id="vd8-Bp-6S9"/>
+                            <constraint firstItem="qjF-bi-aBV" firstAttribute="centerX" secondItem="bx8-TL-D2d" secondAttribute="centerX" id="x8R-j2-ptH"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y9n-B3-mhg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031" y="108"/>
+        </scene>
+        <!--Text View Controller-->
+        <scene sceneID="uNN-5C-65r">
+            <objects>
+                <viewController storyboardIdentifier="text" id="8LM-Si-iyw" customClass="TextViewController" customModule="SlamIOSPod_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Iw-qP-cdC"/>
+                        <viewControllerLayoutGuide type="bottom" id="beD-DK-gWF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Xa-gR-yZ5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SlamIOS Pod" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="ATl-d7-eEj">
+                                <rect key="frame" x="79" y="28" width="217" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="4qA-xE-BOt">
+                                <rect key="frame" x="152" y="79" width="71" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uiw-iV-HPv" customClass="SlamButton" customModule="SlamIOSPod">
+                                <rect key="frame" x="164.5" y="617" width="46" height="30"/>
+                                <state key="normal" title="Return"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="task" value="pop"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Information" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKw-ec-h5p" customClass="SlamTextView" customModule="SlamIOSPod">
+                                <rect key="frame" x="20" y="249" width="335" height="60"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="o90-v1-Hcf"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="info"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9aq-XB-Cn2" customClass="SlamSegmentedControl" customModule="SlamIOSPod">
+                                <rect key="frame" x="123" y="130" width="129" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="74a-g4-s5z"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Names"/>
+                                    <segment title="Address"/>
+                                </segments>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="seg"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autoUI" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReT-Vh-gYI" customClass="SlamLabel" customModule="SlamIOSPod">
+                                <rect key="frame" x="20" y="169.5" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="L1"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uZg-2n-JRR" customClass="SlamTextField" customModule="SlamIOSPod">
+                                <rect key="frame" x="66" y="166" width="273" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DXS-yk-M10"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="T1"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3IF-Ww-qlN" customClass="SlamLabel" customModule="SlamIOSPod">
+                                <rect key="frame" x="20" y="214.5" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="L2"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C0p-bh-5xj" customClass="SlamTextField" customModule="SlamIOSPod">
+                                <rect key="frame" x="66" y="211" width="273" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="x1c-2x-hbc"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="T2"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="meQ-pO-Dj2" customClass="SlamTextView" customModule="SlamIOSPod">
+                                <rect key="frame" x="20" y="317" width="335" height="292"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="main"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4qA-xE-BOt" firstAttribute="centerX" secondItem="5Xa-gR-yZ5" secondAttribute="centerX" id="1W4-tH-WgT"/>
+                            <constraint firstItem="mKw-ec-h5p" firstAttribute="leading" secondItem="5Xa-gR-yZ5" secondAttribute="leading" constant="20" id="2YY-24-q90"/>
+                            <constraint firstItem="uiw-iV-HPv" firstAttribute="top" secondItem="meQ-pO-Dj2" secondAttribute="bottom" constant="8" id="4hq-Qo-xGq"/>
+                            <constraint firstItem="9aq-XB-Cn2" firstAttribute="top" secondItem="4qA-xE-BOt" secondAttribute="bottom" constant="8" id="5bY-9z-VSe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uZg-2n-JRR" secondAttribute="trailing" constant="20" id="6C4-RE-NGd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="C0p-bh-5xj" secondAttribute="trailing" constant="20" id="9rm-0l-wtP"/>
+                            <constraint firstItem="uiw-iV-HPv" firstAttribute="centerX" secondItem="5Xa-gR-yZ5" secondAttribute="centerX" id="Ab1-R9-ys2"/>
+                            <constraint firstItem="beD-DK-gWF" firstAttribute="top" secondItem="uiw-iV-HPv" secondAttribute="bottom" constant="20" id="BXa-eZ-D2q"/>
+                            <constraint firstItem="3IF-Ww-qlN" firstAttribute="leading" secondItem="5Xa-gR-yZ5" secondAttribute="leading" constant="20" id="DBT-df-LPU"/>
+                            <constraint firstItem="C0p-bh-5xj" firstAttribute="top" secondItem="uZg-2n-JRR" secondAttribute="bottom" constant="15" id="KrJ-dX-OsF"/>
+                            <constraint firstItem="4qA-xE-BOt" firstAttribute="top" secondItem="ATl-d7-eEj" secondAttribute="bottom" constant="8" id="NaG-nt-vg1"/>
+                            <constraint firstAttribute="trailing" secondItem="mKw-ec-h5p" secondAttribute="trailing" constant="20" id="OtB-4d-kCd"/>
+                            <constraint firstItem="mKw-ec-h5p" firstAttribute="top" secondItem="C0p-bh-5xj" secondAttribute="bottom" constant="8" id="Uh5-8N-RLJ"/>
+                            <constraint firstItem="9aq-XB-Cn2" firstAttribute="centerX" secondItem="5Xa-gR-yZ5" secondAttribute="centerX" id="WNh-V6-iln"/>
+                            <constraint firstItem="meQ-pO-Dj2" firstAttribute="top" secondItem="mKw-ec-h5p" secondAttribute="bottom" constant="8" id="Xeu-h8-seC"/>
+                            <constraint firstItem="meQ-pO-Dj2" firstAttribute="leading" secondItem="5Xa-gR-yZ5" secondAttribute="leading" constant="20" id="ZIF-2X-8hd"/>
+                            <constraint firstItem="ATl-d7-eEj" firstAttribute="centerX" secondItem="5Xa-gR-yZ5" secondAttribute="centerX" id="ZtA-34-7zi"/>
+                            <constraint firstItem="ReT-Vh-gYI" firstAttribute="leading" secondItem="5Xa-gR-yZ5" secondAttribute="leading" constant="20" id="dQP-WH-iQg"/>
+                            <constraint firstItem="uZg-2n-JRR" firstAttribute="top" secondItem="9aq-XB-Cn2" secondAttribute="bottom" constant="8" id="dbq-hb-hvL"/>
+                            <constraint firstItem="uZg-2n-JRR" firstAttribute="leading" secondItem="ReT-Vh-gYI" secondAttribute="trailing" constant="8" id="est-az-2hQ"/>
+                            <constraint firstAttribute="trailing" secondItem="meQ-pO-Dj2" secondAttribute="trailing" constant="20" id="hGb-Eq-Mwb"/>
+                            <constraint firstItem="ReT-Vh-gYI" firstAttribute="firstBaseline" secondItem="uZg-2n-JRR" secondAttribute="firstBaseline" id="kjt-FE-GXR"/>
+                            <constraint firstItem="3IF-Ww-qlN" firstAttribute="firstBaseline" secondItem="C0p-bh-5xj" secondAttribute="firstBaseline" id="rIP-gM-Erb"/>
+                            <constraint firstItem="C0p-bh-5xj" firstAttribute="leading" secondItem="3IF-Ww-qlN" secondAttribute="trailing" constant="8" id="rRo-q0-4ho"/>
+                            <constraint firstItem="ATl-d7-eEj" firstAttribute="top" secondItem="2Iw-qP-cdC" secondAttribute="bottom" constant="8" id="y50-J8-kvr"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kfc-E0-nQ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3072.8000000000002" y="467.3163418290855"/>
+        </scene>
+        <!--Tables View Controller-->
+        <scene sceneID="4jn-Bu-Vm7">
+            <objects>
+                <viewController storyboardIdentifier="tables" id="gBa-Zn-D7L" customClass="TablesViewController" customModule="SlamIOSPod_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WUq-cV-0Ho"/>
+                        <viewControllerLayoutGuide type="bottom" id="fV9-ap-Dze"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="saj-jJ-Bgv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SlamIOS Pod" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="50H-gZ-VkO">
+                                <rect key="frame" x="79" y="28" width="217" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tables" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="NBD-rO-SdU">
+                                <rect key="frame" x="133.5" y="79" width="108.5" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fKH-UR-xLu" customClass="SlamSegmentedControl" customModule="SlamIOSPod">
+                                <rect key="frame" x="127" y="130" width="121" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="seg"/>
+                                </userDefinedRuntimeAttributes>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1dw-8d-NRl" customClass="SlamSingleItemTableView" customModule="SlamIOSPod">
+                                <rect key="frame" x="20" y="195" width="335" height="385"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="label" textLabel="yav-sP-DB7" style="IBUITableViewCellStyleDefault" id="FWt-RS-4GZ">
+                                        <rect key="frame" x="0.0" y="28" width="335" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FWt-RS-4GZ" id="Djt-cj-esF">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yav-sP-DB7">
+                                                    <rect key="frame" x="15" y="0.0" width="305" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="table"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="selectUI" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgO-kd-Hv9" customClass="SlamLabel" customModule="SlamIOSPod">
+                                <rect key="frame" x="20" y="166" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="title"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Idea" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N92-Fp-qN2" customClass="SlamLabel" customModule="SlamIOSPod">
+                                <rect key="frame" x="20" y="588" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="footer"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6j-kw-LyE" customClass="SlamButton" customModule="SlamIOSPod">
+                                <rect key="frame" x="164.5" y="617" width="46" height="30"/>
+                                <state key="normal" title="Return"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="task" value="pop"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rgO-kd-Hv9" secondAttribute="trailing" constant="20" id="122-pg-7fA"/>
+                            <constraint firstItem="N92-Fp-qN2" firstAttribute="leading" secondItem="saj-jJ-Bgv" secondAttribute="leading" constant="20" id="2Qh-ie-Isg"/>
+                            <constraint firstItem="NBD-rO-SdU" firstAttribute="centerX" secondItem="saj-jJ-Bgv" secondAttribute="centerX" id="4yT-zP-tPe"/>
+                            <constraint firstItem="NBD-rO-SdU" firstAttribute="top" secondItem="50H-gZ-VkO" secondAttribute="bottom" constant="8" id="A3b-sv-DQy"/>
+                            <constraint firstItem="rgO-kd-Hv9" firstAttribute="top" secondItem="fKH-UR-xLu" secondAttribute="bottom" constant="8" id="BKa-hi-daT"/>
+                            <constraint firstItem="1dw-8d-NRl" firstAttribute="leading" secondItem="saj-jJ-Bgv" secondAttribute="leading" constant="20" id="KFd-rS-Nlo"/>
+                            <constraint firstItem="50H-gZ-VkO" firstAttribute="top" secondItem="WUq-cV-0Ho" secondAttribute="bottom" constant="8" id="Nmj-tB-8is"/>
+                            <constraint firstItem="s6j-kw-LyE" firstAttribute="top" secondItem="N92-Fp-qN2" secondAttribute="bottom" constant="8" id="QOZ-R2-tTs"/>
+                            <constraint firstItem="fKH-UR-xLu" firstAttribute="top" secondItem="NBD-rO-SdU" secondAttribute="bottom" constant="8" id="a4q-UX-b35"/>
+                            <constraint firstItem="50H-gZ-VkO" firstAttribute="centerX" secondItem="saj-jJ-Bgv" secondAttribute="centerX" id="aZU-0r-p4R"/>
+                            <constraint firstItem="N92-Fp-qN2" firstAttribute="top" secondItem="1dw-8d-NRl" secondAttribute="bottom" constant="8" id="aue-PW-wDb"/>
+                            <constraint firstItem="s6j-kw-LyE" firstAttribute="centerX" secondItem="saj-jJ-Bgv" secondAttribute="centerX" id="f9r-hO-0ie"/>
+                            <constraint firstAttribute="trailing" secondItem="N92-Fp-qN2" secondAttribute="trailing" constant="20" id="hAm-qg-sn6"/>
+                            <constraint firstItem="fKH-UR-xLu" firstAttribute="centerX" secondItem="saj-jJ-Bgv" secondAttribute="centerX" id="l0E-ex-Bau"/>
+                            <constraint firstItem="1dw-8d-NRl" firstAttribute="top" secondItem="rgO-kd-Hv9" secondAttribute="bottom" constant="8" id="md7-uS-NPj"/>
+                            <constraint firstItem="fV9-ap-Dze" firstAttribute="top" secondItem="s6j-kw-LyE" secondAttribute="bottom" constant="20" id="phk-pD-yfL"/>
+                            <constraint firstAttribute="trailing" secondItem="1dw-8d-NRl" secondAttribute="trailing" constant="20" id="ukZ-Df-0GS"/>
+                            <constraint firstItem="rgO-kd-Hv9" firstAttribute="leading" secondItem="saj-jJ-Bgv" secondAttribute="leading" constant="20" id="xko-Zr-wai"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oYT-ez-0v1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2397.5999999999999" y="366.56671664167919"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="UQC-wi-IaG">
+            <objects>
+                <viewController storyboardIdentifier="web" id="9Qn-KM-4LQ" customClass="WebViewController" customModule="SlamIOSPod_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6ga-2Q-wU4"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kci-AG-6AG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yAQ-hG-5QG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SlamIOS Pod" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Kiy-di-PTe">
+                                <rect key="frame" x="79" y="28" width="217" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Web" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="fck-ec-xXM">
+                                <rect key="frame" x="150" y="79" width="75.5" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aHh-eQ-Zer" customClass="SlamSegmentedControl" customModule="SlamIOSPod">
+                                <rect key="frame" x="138" y="130" width="99" height="29"/>
+                                <segments>
+                                    <segment title="Apple"/>
+                                    <segment title="IMDb"/>
+                                </segments>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="seg"/>
+                                </userDefinedRuntimeAttributes>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kj-Hj-XXV" customClass="SlamLabel" customModule="SlamIOSPod">
+                                <rect key="frame" x="20" y="195" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="titlelabel"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="URL: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4M-qb-vmx" customClass="SlamLabel" customModule="SlamIOSPod">
+                                <rect key="frame" x="20" y="166" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="urllabel"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aMk-kT-L78" customClass="SlamWebView" customModule="SlamIOSPod">
+                                <rect key="frame" x="20" y="224" width="335" height="385"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="webs"/>
+                                </userDefinedRuntimeAttributes>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HrT-P5-VYO" customClass="SlamButton" customModule="SlamIOSPod">
+                                <rect key="frame" x="164.5" y="617" width="46" height="30"/>
+                                <state key="normal" title="Return"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="task" value="pop"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1kj-Hj-XXV" firstAttribute="leading" secondItem="yAQ-hG-5QG" secondAttribute="leading" constant="20" id="0nC-vp-qlQ"/>
+                            <constraint firstItem="HrT-P5-VYO" firstAttribute="top" secondItem="aMk-kT-L78" secondAttribute="bottom" constant="8" id="2xi-ks-5xf"/>
+                            <constraint firstAttribute="trailing" secondItem="aMk-kT-L78" secondAttribute="trailing" constant="20" id="3zm-nI-Ex7"/>
+                            <constraint firstItem="aHh-eQ-Zer" firstAttribute="centerX" secondItem="yAQ-hG-5QG" secondAttribute="centerX" id="Aid-Tb-BvI"/>
+                            <constraint firstItem="aMk-kT-L78" firstAttribute="top" secondItem="1kj-Hj-XXV" secondAttribute="bottom" constant="8" id="EpI-LX-HAA"/>
+                            <constraint firstItem="aHh-eQ-Zer" firstAttribute="top" secondItem="fck-ec-xXM" secondAttribute="bottom" constant="8" id="GSF-nH-HkV"/>
+                            <constraint firstItem="1kj-Hj-XXV" firstAttribute="top" secondItem="O4M-qb-vmx" secondAttribute="bottom" constant="8" id="Hez-v9-UBi"/>
+                            <constraint firstItem="fck-ec-xXM" firstAttribute="centerX" secondItem="yAQ-hG-5QG" secondAttribute="centerX" id="IGa-SO-wmh"/>
+                            <constraint firstAttribute="trailing" secondItem="1kj-Hj-XXV" secondAttribute="trailing" constant="20" id="IZl-ct-G2p"/>
+                            <constraint firstItem="HrT-P5-VYO" firstAttribute="centerX" secondItem="yAQ-hG-5QG" secondAttribute="centerX" id="JVy-85-KUn"/>
+                            <constraint firstAttribute="trailing" secondItem="O4M-qb-vmx" secondAttribute="trailing" constant="20" id="NqE-Ow-cgQ"/>
+                            <constraint firstItem="Kiy-di-PTe" firstAttribute="top" secondItem="6ga-2Q-wU4" secondAttribute="bottom" constant="8" id="OUK-VJ-1M9"/>
+                            <constraint firstItem="aMk-kT-L78" firstAttribute="leading" secondItem="yAQ-hG-5QG" secondAttribute="leading" constant="20" id="Q6Z-9n-tb9"/>
+                            <constraint firstItem="fck-ec-xXM" firstAttribute="top" secondItem="Kiy-di-PTe" secondAttribute="bottom" constant="8" id="Rrp-s5-rqr"/>
+                            <constraint firstItem="Kci-AG-6AG" firstAttribute="top" secondItem="HrT-P5-VYO" secondAttribute="bottom" constant="20" id="dy7-zE-YTO"/>
+                            <constraint firstItem="Kiy-di-PTe" firstAttribute="centerX" secondItem="yAQ-hG-5QG" secondAttribute="centerX" id="gIo-12-bSy"/>
+                            <constraint firstItem="O4M-qb-vmx" firstAttribute="top" secondItem="aHh-eQ-Zer" secondAttribute="bottom" constant="8" id="hOf-IE-nfM"/>
+                            <constraint firstItem="O4M-qb-vmx" firstAttribute="leading" secondItem="yAQ-hG-5QG" secondAttribute="leading" constant="20" id="oeN-kS-mjd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jb0-Xf-6xF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1725.5999999999999" y="440.32983508245883"/>
         </scene>
     </scenes>
 </document>

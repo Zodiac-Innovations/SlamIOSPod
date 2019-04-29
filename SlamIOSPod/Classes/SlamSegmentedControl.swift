@@ -11,6 +11,10 @@ import UIKit
 // MARK: Class
 
 /// Closure based Segmented Control
+///
+/// This class provides a closure based Segmented Control view. It supports the SlamViewProtocol, SlamControlProtocol, and SlamInteractiveProtocol (with appropriate properties and functions).
+///
+/// The currentSegmentDataSource property contains a closure that calculates the selected segment (zero-count), while the labelArrayDataSource property has a closure that returns an array of strings. These strings are used for the number of items in the segment, and their labels.
 public class SlamSegmentedControl: UISegmentedControl, SlamControlProtocol, SlamInteractiveProtocol {
     
     // MARK: Protocol Properties
@@ -31,6 +35,7 @@ public class SlamSegmentedControl: UISegmentedControl, SlamControlProtocol, Slam
 
     // MARK: Computed Properties
     
+    // Calculates the current selected segment (zero based). This returns nil if no segmented is selected
     public var currentSegment: Int? {
         get {
             let seg = self.selectedSegmentIndex
@@ -51,7 +56,7 @@ public class SlamSegmentedControl: UISegmentedControl, SlamControlProtocol, Slam
     public var currentSegmentDataSource: Slam.OptionalIntClosure?
     
    /// Optional data source closure for active
-    var labelArrayDataSource: Slam.StringArrayClosure? = nil
+    public var labelArrayDataSource: Slam.StringArrayClosure? = nil
     
     // MARK: Private Properties
     
@@ -120,14 +125,14 @@ public class SlamSegmentedControl: UISegmentedControl, SlamControlProtocol, Slam
     // MARK: Private Methods
     
     /// Action method invoked when view is pressed. It invokes the closure.
-    @objc func press(sender: UIView) {
+    @objc public func press(sender: UIView) {
         pressAction()
     }
 }
 
 // MARK: Extension
 
-extension UIViewController {
+public extension UIViewController {
     
     /// Returns an SegmentedControl with given referral id
     ///

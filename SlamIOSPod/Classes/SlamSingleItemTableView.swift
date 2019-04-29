@@ -11,6 +11,14 @@ import UIKit
 // MARK: Class
 
 /// Closure based Table View
+///
+/// This class provides a closure based Switch view. It supports SlamViewProtocol and SlamResetProtocol (with appropriate properties and functions). Note that as a View that supports SlamResetProtocol, a reloadUI() method must be invoked to update the data (cells) stored in the view.
+///
+/// SlamSingleItemTableView is one of the more complex Views of the Framework, appropriate since Table Views are complex views. This subclass of UITableView is for a single section, text only TableViews, where at most one item can be selected (the most common use of Table Views).
+///
+/// The class supports a number of optional ways to fill the cells in the view.  The property staticListLabels has an array of strings that will be simply used by the cell. Alternatively, the closure property selectedDataSource calculates an array of strings that will be simply used by the cell. The third option is to use the itemsForDataSource and the stringForItemDataSource closures, that will return the number of cells and the text for each cell.  Any of these options can be used, but not more than one at a time.
+///
+/// The variable currentSelection contains an optional int. It returns the currently selected row (nil being none), while setting it, will set the currently selected cell (nil meaning no selected cells). The Int value is zero-based. When the inspectable selectUI property is set, changing the selected row causes an update of the entire view controller. The deselectAll(animated:) function deselects any currently selected cell.  The fetchLabel(position:) function returns the text of the given cell. Lastly, the selectEventBlock closure is invoked when the selection changes.
 public class SlamSingleItemTableView: UITableView, SlamViewProtocol, SlamResetProtocol, UITableViewDataSource, UITableViewDelegate {
 
     // MARK: Protocol Properties
@@ -22,7 +30,7 @@ public class SlamSingleItemTableView: UITableView, SlamViewProtocol, SlamResetPr
     // MARK: Computed Properties
     
     /// Current selectiom (zero based). Nil means no selections.
-    var currentSelection: Int? {
+    public var currentSelection: Int? {
         get {
             if let select = indexPathForSelectedRow {
                 if let row = select.last {
@@ -49,22 +57,22 @@ public class SlamSingleItemTableView: UITableView, SlamViewProtocol, SlamResetPr
     // MARK: Properties
     
     /// Optional list to use for labels
-    var staticListLabels: Slam.StringArray?
+    public var staticListLabels: Slam.StringArray?
     
     /// Optional data closure for selected label (zero based). Nil means no selections.
-    var selectedDataSource: Slam.OptionalIntClosure?
+    public var selectedDataSource: Slam.OptionalIntClosure?
     
     /// Optional data closure for list to use for labels
-    var labelsDataSource: Slam.StringArrayClosure?
+    public var labelsDataSource: Slam.StringArrayClosure?
     
     /// Optional data source closure for number of items in table view.
-    var itemsForDataSource: Slam.IntClosure?
+    public var itemsForDataSource: Slam.IntClosure?
     
-    /// Optional data source closure for number of items in table view.
-    var stringForItemDataSource: Slam.SlamStringForIntClosure?
+    /// Optional data source closure for text of items in table view.
+    public var stringForItemDataSource: Slam.SlamStringForIntClosure?
     
     /// Invoked when selection occurs
-    var selectEventBlock: Slam.ActionClosure?
+    public var selectEventBlock: Slam.ActionClosure?
 
     // MARK: Protocol Methods
     
@@ -77,7 +85,7 @@ public class SlamSingleItemTableView: UITableView, SlamViewProtocol, SlamResetPr
     
     // MARK: Lifecycle Methods
     
-    override init(frame: CGRect, style: UITableView.Style) {
+    public override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         
         self.dataSource = self
@@ -87,7 +95,7 @@ public class SlamSingleItemTableView: UITableView, SlamViewProtocol, SlamResetPr
         self.allowsMultipleSelection = false
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder:aDecoder)
         
         self.dataSource = self
@@ -191,7 +199,7 @@ public class SlamSingleItemTableView: UITableView, SlamViewProtocol, SlamResetPr
 
 // MARK: Extension
 
-extension UIViewController {
+public extension UIViewController {
     
     /// Returns an TableView with given referral id
     ///

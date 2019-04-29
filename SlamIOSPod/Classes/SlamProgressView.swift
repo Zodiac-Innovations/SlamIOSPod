@@ -11,6 +11,10 @@ import UIKit
 // MARK: Class
 
 /// Closure based Progress view
+///
+/// This class provides a closure based Progress view. It only supports the SlamViewProtocol (with appropriate properties and functions).
+///
+/// The progresDataSource property contains a closure that calculates the current progress (defined as a value from 0.0 to 1.0).  This fields can be nil, and the values can be set directly.
 public class SlamProgressView: UIProgressView, SlamViewProtocol {
 
     // MARK: Protocol Properties
@@ -21,7 +25,7 @@ public class SlamProgressView: UIProgressView, SlamViewProtocol {
 
     // MARK: Properties
     
-    /// Optional data source closure for current page (0.0 to 1.0)
+    /// Optional data source closure for current progress (0.0 to 1.0)
     public var progresDataSource: Slam.DoubleClosure?
 
     // MARK: Protocol Methods
@@ -45,7 +49,7 @@ public class SlamProgressView: UIProgressView, SlamViewProtocol {
 
 // MARK: Extension
 
-extension UIViewController {
+public extension UIViewController {
     
     /// Returns an ProgressView with given referral id
     ///

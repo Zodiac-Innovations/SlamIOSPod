@@ -11,6 +11,10 @@ import UIKit
 // MARK: Class
 
 /// Closure based Label view
+///
+/// This class provides a closure based Label view. It only supports the SlamViewProtocol (with appropriate properties and functions).
+///
+/// The textDataSource property contains a closure that provides the name of the button to display.
 public class SlamLabel: UILabel, SlamViewProtocol {
     
     // MARK: Protocol Properties
@@ -39,7 +43,7 @@ public class SlamLabel: UILabel, SlamViewProtocol {
 
 // MARK: Extension
 
-extension UIViewController {
+public extension UIViewController {
     
     /// Returns an Label with given referral id
     ///

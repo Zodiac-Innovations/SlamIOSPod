@@ -11,6 +11,8 @@ import UIKit
 // MARK: Class
 
 /// Closure based Activity Indicator
+///
+/// This class provides a closure version of the standard UIActivityIndicatorView.  The animatingDataSource property calculates if the Activity Indicator should be animating (spinning) or not.
 public class SlamActivityIndicatorView: UIActivityIndicatorView, SlamViewProtocol {
 
     // MARK: Protocol Properties
@@ -22,7 +24,7 @@ public class SlamActivityIndicatorView: UIActivityIndicatorView, SlamViewProtoco
     // MARK: Properties
     
     /// Optional data source closure for active
-    var animatingDataSource: Slam.FlagClosure? = nil
+    public var animatingDataSource: Slam.FlagClosure? = nil
 
     // MARK: Protocol Methods
     
@@ -46,7 +48,7 @@ public class SlamActivityIndicatorView: UIActivityIndicatorView, SlamViewProtoco
 
 // MARK: Extension
 
-extension UIViewController {
+public extension UIViewController {
     
     /// Returns an ActivityIndicatorView with given referral id
     ///

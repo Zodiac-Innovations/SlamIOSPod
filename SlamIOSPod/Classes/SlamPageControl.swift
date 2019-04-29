@@ -9,6 +9,10 @@
 import UIKit
 
 /// Closure based Page Control view
+///
+/// This class provides a closure based Pag Control view. It supports the SlamViewProtocol, SlamControlProtocol, and SlamInteractiveProtocol (with appropriate properties and functions).
+///
+/// The currentPageDataSource property contains a closure that calculates the current page (zero count), while the maxPageDataSource property has a closure for the max number of pages.  Either field can be nil, and the values are set directly.
 public class SlamPageControl: UIPageControl, SlamControlProtocol, SlamInteractiveProtocol {
 
     // MARK: Protocol Properties
@@ -72,14 +76,14 @@ public class SlamPageControl: UIPageControl, SlamControlProtocol, SlamInteractiv
     // MARK: Private Methods
     
     /// Action method invoked when view is pressed. It invokes the closure.
-    @objc func press(sender: UIView) {
+    @objc public func press(sender: UIView) {
         pressAction()
     }
 }
 
 // MARK: Extension
 
-extension UIViewController {
+public extension UIViewController {
     
     /// Returns an PageControl with given referral id
     ///
