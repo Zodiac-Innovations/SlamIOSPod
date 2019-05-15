@@ -65,7 +65,7 @@ public class Slam {
         return 1
     }
     
-    /// Version Number of Library
+    /// Version of Library
     class public func version() -> String {
         return "1.0.0"
     }
