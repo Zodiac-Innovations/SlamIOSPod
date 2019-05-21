@@ -81,6 +81,28 @@ public protocol SlamInteractiveProtocol : SlamViewProtocol {
     
 }
 
+/// Protocol for all illusion animated Views
+
+public protocol SlamIllusionProtocol : SlamViewProtocol {
+    
+    // MARK: Typealias
+    
+    /// Illusion Animation Closure, used for a signle view action
+    typealias IllusionClosure = (UIView, Float) -> Void
+
+    // MARK: Required Properties
+    
+    /// Speed of Illusion (animation) in seconds.
+    var illusionSpeed: Float { get set }
+    
+    /// Hide Illusion Closure.
+    var hideAction: IllusionClosure? { get set }
+    
+    /// Show Illusion Closure.
+    var showAction: IllusionClosure? { get set }
+
+}
+
 // MARK: Extension
 
 // Extension for Interactive views to handle being pressed.

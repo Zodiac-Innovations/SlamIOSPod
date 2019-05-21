@@ -3,7 +3,7 @@
 //  SlamIOSPod_Example
 //
 //  Created by Steve Sheets on 4/23/19.
-//  Copyright © 2019 CocoaPods. All rights reserved.
+//  Copyright © 2019 Steve Sheets. All rights reserved.
 //
 
 import UIKit
@@ -24,7 +24,7 @@ class WebViewController: UIViewController {
             let seg = self.findSegmentedControlElement(with: "seg"),
             let titleLabel = self.findLabelElement(with: "titlelabel"),
             let urlLabel = self.findLabelElement(with: "urllabel")
-            else { return }
+                else { return }
         
         titleLabel.textDataSource = {
             let s = web.webTitle

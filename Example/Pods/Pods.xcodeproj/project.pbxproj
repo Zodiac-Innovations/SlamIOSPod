@@ -14,6 +14,8 @@
 		52070B1B4F3A7EE41AE7AADD40FECC83 /* SlamIOSPod-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8897A6FF863A6A3D9080CDE10F436366 /* SlamIOSPod-dummy.m */; };
 		6664D0343F3260F0DA98ECAC4B3369B0 /* Slam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737196B2411E4DE02A03B2DDA202E0EE /* Slam.swift */; };
 		A5037095E988A35F4852E83E6FBD0E84 /* Pods-SlamIOSPod_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 243BD8503C14C86981AB33F622968C54 /* Pods-SlamIOSPod_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA14FE60228BE62F00E17F47 /* SlamPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14FE5D228BE4D100E17F47 /* SlamPickerView.swift */; };
+		AA14FE63228C7C5400E17F47 /* SlamDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA14FE61228C7B9100E17F47 /* SlamDatePicker.swift */; };
 		AA3E600D226E91B1000CB55C /* SlamActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3E600C226E91B0000CB55C /* SlamActivityIndicatorView.swift */; };
 		AA3E601A226E91C0000CB55C /* SlamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3E600E226E91BF000CB55C /* SlamViewController.swift */; };
 		AA3E601B226E91C0000CB55C /* SlamStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3E600F226E91BF000CB55C /* SlamStepper.swift */; };
@@ -72,6 +74,8 @@
 		9CC9FF25D351A20EEBC658DEB18A3173 /* SlamIOSPod.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SlamIOSPod.modulemap; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A16CB526FD13658A7C26F09E17E66F59 /* Pods-SlamIOSPod_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SlamIOSPod_Tests-umbrella.h"; sourceTree = "<group>"; };
+		AA14FE5D228BE4D100E17F47 /* SlamPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SlamPickerView.swift; path = SlamIOSPod/Classes/SlamPickerView.swift; sourceTree = "<group>"; };
+		AA14FE61228C7B9100E17F47 /* SlamDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SlamDatePicker.swift; path = SlamIOSPod/Classes/SlamDatePicker.swift; sourceTree = "<group>"; };
 		AA3E600C226E91B0000CB55C /* SlamActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlamActivityIndicatorView.swift; path = SlamIOSPod/Classes/SlamActivityIndicatorView.swift; sourceTree = "<group>"; };
 		AA3E600E226E91BF000CB55C /* SlamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlamViewController.swift; path = SlamIOSPod/Classes/SlamViewController.swift; sourceTree = "<group>"; };
 		AA3E600F226E91BF000CB55C /* SlamStepper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlamStepper.swift; path = SlamIOSPod/Classes/SlamStepper.swift; sourceTree = "<group>"; };
@@ -175,6 +179,8 @@
 				AAAFB627226520EE0079FA4F /* SlamButton.swift */,
 				AAAFB629226520FA0079FA4F /* SlamLabel.swift */,
 				AA3E6014226E91BF000CB55C /* SlamPageControl.swift */,
+				AA14FE61228C7B9100E17F47 /* SlamDatePicker.swift */,
+				AA14FE5D228BE4D100E17F47 /* SlamPickerView.swift */,
 				AA3E6017226E91C0000CB55C /* SlamProgressView.swift */,
 				AA3E6015226E91BF000CB55C /* SlamSegmentedControl.swift */,
 				AA3E6013226E91BF000CB55C /* SlamSingleItemTableView.swift */,
@@ -364,6 +370,9 @@
 					75C3F4E3565620C808251BA20B313332 = {
 						LastSwiftMigration = 1020;
 					};
+					8A3D5B2E372F480F4FA13824F1E94795 = {
+						LastSwiftMigration = 1020;
+					};
 				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
@@ -422,6 +431,7 @@
 				AA3E6020226E91C0000CB55C /* SlamPageControl.swift in Sources */,
 				AA3E600D226E91B1000CB55C /* SlamActivityIndicatorView.swift in Sources */,
 				AA3E6022226E91C0000CB55C /* SlamSwitch.swift in Sources */,
+				AA14FE60228BE62F00E17F47 /* SlamPickerView.swift in Sources */,
 				AA3E601F226E91C0000CB55C /* SlamSingleItemTableView.swift in Sources */,
 				AA3E6023226E91C0000CB55C /* SlamProgressView.swift in Sources */,
 				AA3E601E226E91C0000CB55C /* SlamTextField.swift in Sources */,
@@ -429,6 +439,7 @@
 				52070B1B4F3A7EE41AE7AADD40FECC83 /* SlamIOSPod-dummy.m in Sources */,
 				AA3E601B226E91C0000CB55C /* SlamStepper.swift in Sources */,
 				AA3E6025226E91C0000CB55C /* SlamTask.swift in Sources */,
+				AA14FE63228C7C5400E17F47 /* SlamDatePicker.swift in Sources */,
 				AA3E601A226E91C0000CB55C /* SlamViewController.swift in Sources */,
 				AAAFB628226520EE0079FA4F /* SlamButton.swift in Sources */,
 				AAAFB62A226520FA0079FA4F /* SlamLabel.swift in Sources */,
@@ -539,6 +550,7 @@
 			baseConfigurationReference = ABC62E4FE961BE9C57BD575E015C9CA6 /* Pods-SlamIOSPod_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -561,6 +573,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -702,6 +716,7 @@
 			baseConfigurationReference = 6F73019BCCF70FFEA40A3BC146521BB2 /* Pods-SlamIOSPod_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -724,6 +739,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

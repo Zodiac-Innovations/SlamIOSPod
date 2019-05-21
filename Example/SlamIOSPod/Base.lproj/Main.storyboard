@@ -73,14 +73,24 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="param" value="https://github.com/magesteve/SlamIOSPod"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VuB-Vb-gNn" customClass="SlamButton" customModule="SlamIOSPod">
+                                <rect key="frame" x="171" y="282" width="33" height="30"/>
+                                <state key="normal" title="Misc"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="task" value="push"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="param" value="misc"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="d1W-AD-nnp" firstAttribute="top" secondItem="uCg-IV-KBE" secondAttribute="bottom" constant="8" id="3SI-NC-56B"/>
                             <constraint firstItem="UpQ-nb-Yp5" firstAttribute="top" secondItem="d1W-AD-nnp" secondAttribute="bottom" constant="8" id="9hk-nS-gfr"/>
+                            <constraint firstItem="VuB-Vb-gNn" firstAttribute="top" secondItem="qZq-BB-4Sn" secondAttribute="bottom" constant="8" id="GOY-V7-bj9"/>
                             <constraint firstItem="uCg-IV-KBE" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Hys-Bh-8Ea"/>
                             <constraint firstItem="d1W-AD-nnp" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="IMZ-ny-eRe"/>
                             <constraint firstItem="UpQ-nb-Yp5" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Iet-nT-47A"/>
+                            <constraint firstItem="VuB-Vb-gNn" firstAttribute="centerX" secondItem="qZq-BB-4Sn" secondAttribute="centerX" id="KTV-et-f8A"/>
                             <constraint firstItem="Mau-yf-Vvy" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="Syz-Gl-Xao"/>
                             <constraint firstItem="Mau-yf-Vvy" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="TXF-d5-Ixn"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ThV-V4-wIo" secondAttribute="bottom" constant="20" id="cYv-Ds-lrr"/>
@@ -310,7 +320,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y9n-B3-mhg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1031" y="108"/>
+            <point key="canvasLocation" x="991" y="240"/>
         </scene>
         <!--Text View Controller-->
         <scene sceneID="uNN-5C-65r">
@@ -454,7 +464,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kfc-E0-nQ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3072.8000000000002" y="467.3163418290855"/>
+            <point key="canvasLocation" x="3050" y="27"/>
         </scene>
         <!--Tables View Controller-->
         <scene sceneID="4jn-Bu-Vm7">
@@ -569,7 +579,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oYT-ez-0v1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2397.5999999999999" y="366.56671664167919"/>
+            <point key="canvasLocation" x="2364" y="302"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="UQC-wi-IaG">
@@ -667,7 +677,85 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jb0-Xf-6xF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1725.5999999999999" y="440.32983508245883"/>
+            <point key="canvasLocation" x="1671" y="7"/>
+        </scene>
+        <!--Misc View Controller-->
+        <scene sceneID="L4L-10-oUS">
+            <objects>
+                <viewController storyboardIdentifier="misc" id="aYA-LA-G02" customClass="MiscViewController" customModule="SlamIOSPod_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HK1-ZJ-EnA"/>
+                        <viewControllerLayoutGuide type="bottom" id="eqc-1I-phb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gnG-eu-2Db">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SlamIOS Pod" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="xa2-xY-WWi">
+                                <rect key="frame" x="79" y="28" width="217" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Misc" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Nb4-Yq-H7h">
+                                <rect key="frame" x="147.5" y="79" width="80" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpi-de-ncA" customClass="SlamButton" customModule="SlamIOSPod">
+                                <rect key="frame" x="164.5" y="617" width="46" height="30"/>
+                                <state key="normal" title="Return"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="task" value="pop"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City &amp; Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isT-A9-iTU">
+                                <rect key="frame" x="147" y="130" width="81" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oXT-ad-S6i" customClass="SlamPickerView" customModule="SlamIOSPod">
+                                <rect key="frame" x="0.0" y="165" width="375" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="cities"/>
+                                </userDefinedRuntimeAttributes>
+                            </pickerView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="wu1-Zb-r1m" customClass="SlamDatePicker" customModule="SlamIOSPod">
+                                <rect key="frame" x="0.0" y="391" width="375" height="216"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <date key="date" timeIntervalSinceReferenceDate="579634835.94799101">
+                                    <!--2019-05-15 17:40:35 +0000-->
+                                </date>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="referral" value="date"/>
+                                </userDefinedRuntimeAttributes>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xa2-xY-WWi" firstAttribute="centerX" secondItem="gnG-eu-2Db" secondAttribute="centerX" id="2BY-Nq-27O"/>
+                            <constraint firstItem="wu1-Zb-r1m" firstAttribute="leading" secondItem="gnG-eu-2Db" secondAttribute="leading" id="565-TQ-GKd"/>
+                            <constraint firstItem="oXT-ad-S6i" firstAttribute="leading" secondItem="gnG-eu-2Db" secondAttribute="leading" id="GKb-Cv-byC"/>
+                            <constraint firstAttribute="trailing" secondItem="wu1-Zb-r1m" secondAttribute="trailing" id="HE8-c9-tez"/>
+                            <constraint firstItem="xa2-xY-WWi" firstAttribute="top" secondItem="HK1-ZJ-EnA" secondAttribute="bottom" constant="8" id="Ir5-GR-eFL"/>
+                            <constraint firstItem="isT-A9-iTU" firstAttribute="centerX" secondItem="Nb4-Yq-H7h" secondAttribute="centerX" id="Jgj-AQ-PTV"/>
+                            <constraint firstItem="Nb4-Yq-H7h" firstAttribute="centerX" secondItem="gnG-eu-2Db" secondAttribute="centerX" id="PHp-t6-v0D"/>
+                            <constraint firstItem="Nb4-Yq-H7h" firstAttribute="top" secondItem="xa2-xY-WWi" secondAttribute="bottom" constant="8" id="TUp-Pa-3gE"/>
+                            <constraint firstItem="wu1-Zb-r1m" firstAttribute="top" secondItem="oXT-ad-S6i" secondAttribute="bottom" constant="10" id="Usa-nl-zmW"/>
+                            <constraint firstAttribute="trailing" secondItem="oXT-ad-S6i" secondAttribute="trailing" id="YX7-Cv-vEc"/>
+                            <constraint firstItem="bpi-de-ncA" firstAttribute="centerX" secondItem="gnG-eu-2Db" secondAttribute="centerX" id="lB8-E7-W55"/>
+                            <constraint firstItem="oXT-ad-S6i" firstAttribute="top" secondItem="isT-A9-iTU" secondAttribute="bottom" constant="14" id="u3y-Oj-xDz"/>
+                            <constraint firstItem="isT-A9-iTU" firstAttribute="top" secondItem="Nb4-Yq-H7h" secondAttribute="bottom" constant="8" id="vY1-3z-21m"/>
+                            <constraint firstItem="eqc-1I-phb" firstAttribute="top" secondItem="bpi-de-ncA" secondAttribute="bottom" constant="20" id="wn5-ZT-AtS"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8tJ-dQ-RAG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3726" y="396"/>
         </scene>
     </scenes>
 </document>
